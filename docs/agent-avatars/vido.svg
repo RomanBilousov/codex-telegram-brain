@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="48" x2="456" y2="462" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3F1D7A"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(392 118) rotate(140) scale(224)">
+      <stop stop-color="#FDBA74" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#FDBA74" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="120" fill="url(#glow)"/>
+  <circle cx="256" cy="206" r="108" fill="#22113A" fill-opacity="0.88"/>
+  <path d="M166 212C177 163 211 128 256 128C301 128 335 163 346 212C321 236 290 248 256 248C222 248 191 236 166 212Z" fill="#41205F"/>
+  <path d="M148 404C165 332 214 288 256 288C298 288 347 332 364 404" stroke="#FFF7ED" stroke-width="34" stroke-linecap="round"/>
+  <rect x="172" y="148" width="168" height="96" rx="26" fill="#FFF7ED" fill-opacity="0.96"/>
+  <path d="M234 174L292 196L234 218V174Z" fill="#F97316"/>
+  <path d="M182 270C190 258 202 258 210 270C218 282 230 282 238 270C246 258 258 258 266 270C274 282 286 282 294 270C302 258 314 258 322 270" stroke="#FED7AA" stroke-width="10" stroke-linecap="round"/>
+  <text x="48" y="458" fill="#FFF8F1" font-family="Avenir, Inter, sans-serif" font-size="46" font-weight="700">Видо</text>
+  <text x="48" y="492" fill="#FED7AA" font-family="Avenir, Inter, sans-serif" font-size="22" letter-spacing="1.5">VIDEO</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="1600" height="1120" viewBox="0 0 1600 1120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06131F"/>
+      <stop offset="1" stop-color="#132238"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1120" rx="56" fill="url(#bg)"/>
+  <text x="88" y="110" fill="#F8FAFC" font-family="Avenir, Inter, sans-serif" font-size="52" font-weight="700">Codex Brain Team</text>
+  <text x="88" y="154" fill="#94A3B8" font-family="Avenir, Inter, sans-serif" font-size="24">Agent avatars v1</text>
+  <image href="ray.svg" x="88" y="210" width="400" height="400"/>
+  <image href="mira.svg" x="600" y="210" width="400" height="400"/>
+  <image href="platon.svg" x="1112" y="210" width="400" height="400"/>
+  <image href="cody.svg" x="88" y="642" width="400" height="400"/>
+  <image href="vera.svg" x="600" y="642" width="400" height="400"/>
+  <image href="vido.svg" x="1112" y="642" width="400" height="400"/>
+</svg>

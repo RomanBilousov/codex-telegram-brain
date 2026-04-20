@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="54" y1="54" x2="458" y2="458" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(384 118) rotate(140) scale(220)">
+      <stop stop-color="#A7F3D0" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#A7F3D0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="120" fill="url(#glow)"/>
+  <circle cx="256" cy="206" r="108" fill="#09131F" fill-opacity="0.88"/>
+  <path d="M166 212C177 163 211 128 256 128C301 128 335 163 346 212C321 236 290 248 256 248C222 248 191 236 166 212Z" fill="#14372C"/>
+  <path d="M148 404C165 332 214 288 256 288C298 288 347 332 364 404" stroke="#F0FDF4" stroke-width="34" stroke-linecap="round"/>
+  <path d="M256 136L342 170V226C342 279 308 319 256 338C204 319 170 279 170 226V170L256 136Z" fill="#ECFDF5" fill-opacity="0.96"/>
+  <path d="M220 228L245 252L294 201" stroke="#10B981" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="48" y="458" fill="#F7FFF9" font-family="Avenir, Inter, sans-serif" font-size="46" font-weight="700">Вера</text>
+  <text x="48" y="492" fill="#C7F9DE" font-family="Avenir, Inter, sans-serif" font-size="22" letter-spacing="1.5">REVIEW</text>
+</svg>

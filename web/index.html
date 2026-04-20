@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#4da6a1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Pocket Office" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Codex Pocket Office</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="screen screen-auth hidden" id="authScreen">
+        <header class="auth-hero">
+          <p class="eyebrow">Codex Pocket Office</p>
+          <h1>Вход через Telegram</h1>
+          <p class="auth-copy" id="authCopy">
+            Авторизуйтесь Telegram-профилем, чтобы веб-чаты были привязаны к вашему аккаунту и не терялись между устройствами.
+          </p>
+          <div class="auth-code-group hidden" id="authCodeGroup">
+            <input id="authCodeInput" type="text" inputmode="text" autocapitalize="characters" autocomplete="one-time-code" maxlength="12" placeholder="Код входа" />
+            <button class="solid-button" id="authCodeSubmit" type="button">Войти</button>
+          </div>
+          <div class="auth-actions">
+            <button class="solid-button" id="loginButton" type="button">Войти через Telegram</button>
+          </div>
+        </header>
+      </section>
+
+      <section class="screen screen-list" id="listScreen">
+        <header class="list-header">
+          <div>
+            <p class="eyebrow">Codex Pocket Office</p>
+            <h1>Агенты</h1>
+            <p class="auth-meta hidden" id="authMeta"></p>
+          </div>
+          <div class="list-actions">
+            <button class="ghost-button hidden" id="logoutButton" type="button">Выйти</button>
+            <button class="ghost-button" id="refreshButton" type="button">Обновить</button>
+          </div>
+        </header>
+
+        <section class="install-banner hidden" id="installBanner">
+          <div>
+            <p class="install-title">Сохранить как приложение</p>
+            <p class="install-copy" id="installCopy"></p>
+          </div>
+          <div class="install-actions">
+            <button class="solid-button" id="installButton" type="button">Установить</button>
+            <button class="ghost-button" id="dismissInstallButton" type="button">Скрыть</button>
+          </div>
+        </section>
+
+        <main class="chat-list" id="chatList"></main>
+      </section>
+
+      <section class="screen screen-chat hidden" id="chatScreen">
+        <header class="chat-header">
+          <button class="back-button" id="backButton" type="button" aria-label="Назад">←</button>
+          <button class="chat-profile-trigger" id="profileTrigger" type="button">
+            <img alt="" id="chatHeaderAvatar" />
+            <span>
+              <strong id="chatHeaderName"></strong>
+              <small id="chatHeaderRole"></small>
+            </span>
+          </button>
+        </header>
+
+        <section class="workspace-bar hidden" id="workspaceBar">
+          <label for="workspaceSelect">Workspace</label>
+          <select id="workspaceSelect"></select>
+        </section>
+
+        <section class="messages" id="messages"></section>
+
+        <form class="composer" id="composer">
+          <textarea
+            id="composerInput"
+            rows="1"
+            maxlength="6000"
+            placeholder="Сообщение"
+          ></textarea>
+          <button class="send-button" id="sendButton" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+
+    <aside class="sheet hidden" id="detailSheet" aria-hidden="true">
+      <div class="sheet-backdrop" id="sheetBackdrop"></div>
+      <section class="sheet-panel">
+        <header class="sheet-header">
+          <div>
+            <p class="eyebrow">Профиль агента</p>
+            <h2 id="detailTitle"></h2>
+          </div>
+          <button class="ghost-button" id="closeDetailButton" type="button">Закрыть</button>
+        </header>
+
+        <div class="profile-editor">
+          <img alt="" id="detailAvatar" class="detail-avatar" />
+          <div class="profile-fields">
+            <label>
+              <span>Имя агента</span>
+              <input id="detailNameInput" type="text" maxlength="40" />
+            </label>
+            <div class="profile-actions">
+              <label class="ghost-button upload-button" for="avatarInput">Сменить аватар</label>
+              <input id="avatarInput" type="file" accept="image/*" hidden />
+              <button class="ghost-button" id="resetAvatarButton" type="button">Сбросить аватар</button>
+              <button class="solid-button" id="saveProfileButton" type="button">Сохранить</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="detail-section">
+          <h3>Роль и миссия</h3>
+          <p id="detailSummary"></p>
+          <p id="detailMission" class="detail-muted"></p>
+        </section>
+
+        <section class="detail-section">
+          <h3>Skills</h3>
+          <div id="detailSkills" class="stack-list"></div>
+        </section>
+
+        <section class="detail-section">
+          <h3>Память агента</h3>
+          <div id="detailMemories" class="stack-list"></div>
+        </section>
+
+        <section class="detail-section">
+          <h3>Память этого чата</h3>
+          <div id="detailSessionMemories" class="stack-list"></div>
+        </section>
+
+        <section class="detail-section">
+          <h3>Папки и контекст</h3>
+          <div id="detailFolders" class="stack-list"></div>
+        </section>
+
+        <section class="detail-section">
+          <h3>Context files</h3>
+          <div id="detailContextFiles" class="stack-list"></div>
+        </section>
+      </section>
+    </aside>
+
+    <template id="chatRowTemplate">
+      <button class="chat-row" type="button">
+        <img alt="" class="chat-row-avatar" />
+        <div class="chat-row-copy">
+          <div class="chat-row-topline">
+            <strong></strong>
+            <time></time>
+          </div>
+          <p class="chat-row-role"></p>
+          <p class="chat-row-preview"></p>
+        </div>
+      </button>
+    </template>
+
+    <template id="messageTemplate">
+      <article class="message">
+        <header></header>
+        <div class="message-body"></div>
+      </article>
+    </template>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

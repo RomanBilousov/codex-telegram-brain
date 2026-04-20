@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="56" x2="448" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A2540"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(386 120) rotate(140) scale(224)">
+      <stop stop-color="#93C5FD" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#93C5FD" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="120" fill="url(#glow)"/>
+  <circle cx="256" cy="206" r="108" fill="#081626" fill-opacity="0.88"/>
+  <path d="M164 212C175 163 210 128 256 128C302 128 337 163 348 212C323 236 291 248 256 248C221 248 189 236 164 212Z" fill="#143056"/>
+  <path d="M146 404C164 332 214 288 256 288C298 288 348 332 366 404" stroke="#EFF6FF" stroke-width="34" stroke-linecap="round"/>
+  <rect x="176" y="146" width="160" height="94" rx="24" fill="#EFF6FF" fill-opacity="0.95"/>
+  <path d="M226 170L194 193L226 216" stroke="#1D4ED8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M286 170L318 193L286 216" stroke="#1D4ED8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M262 166L250 220" stroke="#1D4ED8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="256" cy="266" r="8" fill="#93C5FD"/>
+  <circle cx="228" cy="266" r="8" fill="#93C5FD"/>
+  <circle cx="284" cy="266" r="8" fill="#93C5FD"/>
+  <text x="48" y="458" fill="#F7FBFF" font-family="Avenir, Inter, sans-serif" font-size="46" font-weight="700">Коди</text>
+  <text x="48" y="492" fill="#BFDBFE" font-family="Avenir, Inter, sans-serif" font-size="22" letter-spacing="1.5">ENGINEER</text>
+</svg>

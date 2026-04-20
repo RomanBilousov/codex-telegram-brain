@@ -1,0 +1,17 @@
+{
+  "name": "Codex Pocket Office",
+  "short_name": "Pocket Office",
+  "description": "Mobile-first companion for a local multi-agent Telegram assistant.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efe5",
+  "theme_color": "#0b726e",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

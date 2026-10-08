@@ -1,3 +1,7 @@
+[Русский README](README.md)
+
+> This English README is preserved for external readers. Commands and package-level requirements below were checked against source commit `d1711c396612486eb8b197217838bf2d79c4409f`. Telegram/runtime behavior and any external workspace interaction still require fresh verification before use.
+
 # Codex Telegram Brain
 
 Codex Telegram Brain is a local multi-agent Telegram runtime built around the
